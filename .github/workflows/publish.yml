@@ -19,7 +19,8 @@ jobs:
       # The environment variables are required at **build time**, you cannot set them
       # at runtime. Thus this docker image is just for show and this file is something
       # for you to copy and adapt to your needs.
-
+      - run: |
+          mv .env.prod .env
       - name: Docker meta
         id: docker_meta
         uses: docker/metadata-action@v4
